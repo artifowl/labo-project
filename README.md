@@ -27,13 +27,17 @@ Three types of interfaces will be explored:
 
 ### 3. Conclusion and Feedback (*To be defined*)
 - 🗒 Generate recommendations based on the analysis.
-- 🖥 Integrate with user interfaces.
+- 🖥 Integrate with user interfaces (web).
 - 🧪 Testing and improvements.
+- 📦 Deployment and documentation.
 
 ## Technologies Used
-- **Primary Language**: `C` (for analysis and parsing)
+- **Primary Language**: `Haskell` (for analysis and parsing)
+- **Libraries**: 
+  - `language C` (for parsing)
+  - `To be determined` 
+  - `To be determined`
 - **Frameworks/Web**: *(To be determined based on the chosen option)*
-- **Database**: *(If needed, to be determined)*
 
 ## Current Status
 🔄 *In the definition and structuring phase of the project.*
