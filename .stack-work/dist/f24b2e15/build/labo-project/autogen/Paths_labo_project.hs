@@ -47,7 +47,7 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 bindir     = "C:\\Users\\Artifowl\\Documents\\Project\\HASKELL\\labo-project\\.stack-work\\install\\c5c14c6b\\bin"
-libdir     = "C:\\Users\\Artifowl\\Documents\\Project\\HASKELL\\labo-project\\.stack-work\\install\\c5c14c6b\\lib\\x86_64-windows-ghc-9.8.4\\labo-project-0.1.0.0-3YhdML6O9xSBvpOYvdN1Jt-labo-project"
+libdir     = "C:\\Users\\Artifowl\\Documents\\Project\\HASKELL\\labo-project\\.stack-work\\install\\c5c14c6b\\lib\\x86_64-windows-ghc-9.8.4\\labo-project-0.1.0.0-I8nMasctk42763zx1WCIJl-labo-project"
 dynlibdir  = "C:\\Users\\Artifowl\\Documents\\Project\\HASKELL\\labo-project\\.stack-work\\install\\c5c14c6b\\lib\\x86_64-windows-ghc-9.8.4"
 datadir    = "C:\\Users\\Artifowl\\Documents\\Project\\HASKELL\\labo-project\\.stack-work\\install\\c5c14c6b\\share\\x86_64-windows-ghc-9.8.4\\labo-project-0.1.0.0"
 libexecdir = "C:\\Users\\Artifowl\\Documents\\Project\\HASKELL\\labo-project\\.stack-work\\install\\c5c14c6b\\libexec\\x86_64-windows-ghc-9.8.4\\labo-project-0.1.0.0"
