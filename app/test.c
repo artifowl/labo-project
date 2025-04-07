@@ -2,7 +2,7 @@
 
 int main()
 {
-    // Ceci est un commentaire inutile
+    // Useless comment 
     int x, y;
     x = 3;
     y = 4;

@@ -13,22 +13,25 @@ import qualified Data.ByteString as BS
 import System.Exit (exitFailure, exitSuccess)
 
 
+-- Function destinated to only keep our file's AST without the include
 filterFromSource :: FilePath -> CTranslUnit -> [CExtDecl]
 filterFromSource myFile (CTranslUnit decls _) = 
     filter (\decl -> getfile (nodeInfo decl) == myFile) decls
   where 
     getfile :: NodeInfo -> FilePath
     getfile ni = posFile (posOfNode ni)
- 
 
-mainParser :: IO ()
-mainParser = do
+
+-- Main function -> File -> Parsed File -> AST File
+mainParser :: FilePath -> IO ()
+mainParser file = do
     let gccPreprocessor = newGCC "gcc"
 
-    let myInputFile = "app/test.c"
+    let myInputFile = file
     let myOutputFile = "app/preprocessed_output.i"
     let parseFile = "app/parse.txt"
-    let cppArgs = ["-E", myInputFile, "-o", myOutputFile]
+
+    let cppArgs = ["-Wall", myInputFile, "-o", myOutputFile] --Arguments for the preprocessing
 
     case parseCPPArgs gccPreprocessor cppArgs of
         Left err -> putStrLn $ "Preprocessor argument error: " ++ err
@@ -46,7 +49,7 @@ mainParser = do
                             putStrLn $ "Parsing error: " ++ show err
                             exitFailure
                         Right translUnit -> do
-                            putStrLn "Parsing successful"
+                            putStrLn "Parsing successful" 
                             let parseFilter = filterFromSource myInputFile translUnit 
                             let parseFilterText = Text.pack (show parseFilter)
                             result <- try (T.writeFile parseFile parseFilterText) :: IO (Either IOException())
@@ -57,6 +60,6 @@ mainParser = do
                                 Right () -> do 
                                     putStrLn "Writing success"
                                     exitSuccess
-                else do
-                    putStrLn "The file was not preprocessed correctly."
-                    exitFailure
+            else do
+                putStrLn "The file was not preprocessed correctly."
+                exitFailure
