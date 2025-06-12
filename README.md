@@ -1,33 +1,33 @@
 # Labo Project
 
-## 📝 Description
+## Description
 Labo Project is a server-side system designed to analyze submitted C source code, track student progress, and provide personalized feedback.
 
 ---
 
-## 🚀 Workflow
+## Workflow
 1. **Parsing**: Syntax analysis of submitted code.
 2. **Analysis**: Code evaluation based on predefined criteria.
 3. **Conclusion**: Feedback and recommendations generation.
 
 ---
 
-## 🖥 Interfaces
-- **🌐 Web Application**: Browser-based interface.
-- **💻 CLI**: Command Line Interface for quick analysis.
-- **🖥 Desktop App**: Standalone application.
+## Interfaces
+- **Web Application**: Browser-based interface.
+- **CLI**: Command Line Interface for quick analysis.
+- **Desktop App**: Standalone application.
 
 ---
 
-## 📅 Project Timeline
+## Project Timeline
 
 ### Parsing Phase (02/04/2025 - 15/04/2025)
-- ✅ Project architecture definition.
-- ✅ C libraries research.
-- ✅ Parser module development.
+- Project architecture definition.
+- C libraries research.
+- Parser module development.
 
 ### Analysis Phase (15/04/2025 - 15/06/2025)
-- 🔍 Vulnerability detection:
+- Vulnerability detection:
   - Buffer overflows (CWE-121, CWE-787).
   - Use-after-free (CWE-416).
   - Integer overflows (CWE-190).
@@ -35,13 +35,13 @@ Labo Project is a server-side system designed to analyze submitted C source code
   - Out-of-bounds reads (CWE-125).
 
 ### Final Phase (2 weeks)
-- 🖥 UI integration.
-- 🧪 Comprehensive testing.
-- 📦 Deployment and documentation.
+- UI integration.
+- Comprehensive testing.
+- Deployment and documentation.
 
 ---
 
-## 🛠 Technology Stack
+## Technology Stack
 - **Main Language**: Haskell.
 - **Key Libraries**:
   - `language-c` for parsing.
@@ -50,12 +50,12 @@ Labo Project is a server-side system designed to analyze submitted C source code
 
 ---
 
-## 🔄 Current Status
+## Current Status
 **Active development** - Analysis phase completed.
 
 ---
 
-## 🧰 Installation & Execution
+## Installation & Execution
 
 ### Prerequisites
 Before building and running the project, ensure the following tools are installed:
@@ -103,7 +103,7 @@ You will see output indicating which tests passed or failed, ensuring the analyz
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Example of Usage
 ![Example of usage](https://i.ibb.co/d44vHQNq/Screenshot-From-2025-06-12-15-47-01.png)
@@ -113,3 +113,8 @@ You will see output indicating which tests passed or failed, ensuring the analyz
 
 ---
 
+## Future Enhancements
+Future updates will expand the scope of analysis to cover:
+- Additional vulnerabilities.
+- Code smells.
+- Advanced static analysis techniques.
