@@ -16,12 +16,17 @@ Three types of interfaces will be explored:
 
 ## Project Timeline
 ### 1. Parsing (`02/04/2025 - 15/04/2025`) - *2 weeks*
-- 📌 Define the project architecture.
-- 📚 Study and understand the necessary C libraries.
-- 🛠 Develop the parsing module to analyze submitted source code.
+- 📌 Define the project architecture.✅
+- 📚 Study and understand the necessary C libraries.✅
+- 🛠 Develop the parsing module to analyze submitted source code.✅
 
 ### 2. Analysis (`15/04/2025 - 15/06/2025`) - *2 month*
 - 📝 Define the criteria for code analysis.
+  - 💥 Buffer overflows (CWE-121) and out-of-bounds writes (CWE-787)
+  - ☠️ Use after free (CWE-416)
+  - ➗ Integer overflows/underflow (CWE-190)
+  - ❌ Null pointer dereference (CWE-476)
+  - 👀 Out-of-bounds read (CWE-125)
 - 🔍 Implement algorithms for error detection and code quality assessment.
 - 🔗 Integrate with the parsing module.
 
