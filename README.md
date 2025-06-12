@@ -20,23 +20,22 @@ Three types of interfaces will be explored:
 - 📚 Study and understand the necessary C libraries.
 - 🛠 Develop the parsing module to analyze submitted source code.
 
-### 2. Analysis (`15/04/2025 - 15/05/2025`) - *1 month*
+### 2. Analysis (`15/04/2025 - 15/06/2025`) - *2 month*
 - 📝 Define the criteria for code analysis.
 - 🔍 Implement algorithms for error detection and code quality assessment.
 - 🔗 Integrate with the parsing module.
 
-### 3. Conclusion and Feedback (*To be defined*)
-- 🗒 Generate recommendations based on the analysis.
-- 🖥 Integrate with user interfaces (web).
-- 🧪 Testing and improvements.
+### 3. Conclusion and Feedback (*2 weeks*)
+- 🖥 Integrate with user interfaces.
+- 🧪 Testing and improvements
 - 📦 Deployment and documentation.
 
 ## Technologies Used
 - **Primary Language**: `Haskell` (for analysis and parsing)
 - **Libraries**: 
-  - `language C` (for parsing)
-  - `To be determined` 
-  - `To be determined`
+  - `language C` (for parsing and analysing)
+  - `tasty` (for test implementation)
+
 - **Frameworks/Web**: *(To be determined based on the chosen option)*
 
 ## Current Status
