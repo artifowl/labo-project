@@ -65,3 +65,5 @@ packages:
 #
 # Allow a newer minor version of GHC than the snapshot specifies
 # compiler-check: newer-minor
+extra-deps:
+  - graph-0.0.0.0@sha256:896c932df46201bd9777282a37e8ad544a8b682379f342b776d4ccf16dd34846,2812

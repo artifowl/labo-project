@@ -12,7 +12,6 @@ import Language.C.Syntax.AST
 import qualified Data.ByteString as BS
 import System.Exit (exitFailure, exitSuccess)
 
-
 -- Function destinated to only keep our file's AST without the include
 filterFromSource :: FilePath -> CTranslUnit -> [CExtDecl]
 filterFromSource myFile (CTranslUnit decls _) = 
@@ -21,20 +20,18 @@ filterFromSource myFile (CTranslUnit decls _) =
     getfile :: NodeInfo -> FilePath
     getfile ni = posFile (posOfNode ni)
 
-
 -- Main function -> File -> Parsed File -> AST File
-mainParser :: FilePath -> IO ()
+mainParser :: FilePath -> IO (Either String [CExtDecl])
 mainParser file = do
     let gccPreprocessor = newGCC "gcc"
-
     let myInputFile = file
     let myOutputFile = "app/preprocessed_output.i"
-    let parseFile = "app/parse.txt"
+    let parseFile = "app/AST.txt"
 
-    let cppArgs = ["-Wall", myInputFile, "-o", myOutputFile] --Arguments for the preprocessing
+    let cppArgs = ["-Wall", myInputFile, "-o", myOutputFile]
 
     case parseCPPArgs gccPreprocessor cppArgs of
-        Left err -> putStrLn $ "Preprocessor argument error: " ++ err
+        Left err -> return $ Left $ "Preprocessor argument error: " ++ err
         Right (args, remainingArgs) -> do
             putStrLn $ "Remaining arguments: " ++ show remainingArgs
             _ <- runCPP gccPreprocessor args
@@ -45,21 +42,17 @@ mainParser file = do
                     let pos = position 0 myOutputFile 0 0 Nothing
                     let parseResult = parseC contents pos
                     case parseResult of
-                        Left err -> do
-                            putStrLn $ "Parsing error: " ++ show err
-                            exitFailure
+                        Left err -> return $ Left $ "Parsing error: " ++ show err
                         Right translUnit -> do
                             putStrLn "Parsing successful" 
-                            let parseFilter = filterFromSource myInputFile translUnit 
+                            let parseFilter = filterFromSource myInputFile translUnit                           
+                            -- Génère l'AST proprement dit en texte
                             let parseFilterText = Text.pack (show parseFilter)
-                            result <- try (T.writeFile parseFile parseFilterText) :: IO (Either IOException())
+                            -- Sauvegarde de l'AST textuel
+                            result <- try (T.writeFile parseFile parseFilterText) :: IO (Either IOException ())
                             case result of 
-                                Left err -> do 
-                                    putStrLn $ "File write error: " ++ show err
-                                    exitFailure
+                                Left err -> return $ Left $ "File write error: " ++ show err
                                 Right () -> do 
                                     putStrLn "Writing success"
-                                    exitSuccess
-            else do
-                putStrLn "The file was not preprocessed correctly."
-                exitFailure
+                                    return $ Right parseFilter
+            else return $ Left "The file was not preprocessed correctly."
