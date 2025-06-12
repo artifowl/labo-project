@@ -1,18 +1,18 @@
 # Labo Project
 
 ## Description
-Labo Project is a server-side system designed to analyze submitted C source code, track student progress, and provide personalized feedback.
+Server-side system designed to analyze submitted C source code, track student progress, and provide personalized feedback.
 
 ---
 
 ## Workflow
 1. **Parsing**: Syntax analysis of submitted code.
 2. **Analysis**: Code evaluation based on predefined criteria.
-3. **Conclusion**: Feedback and recommendations generation.
+3. **Conclusion**: Feedback and recommendations.
 
 ---
 
-## Interfaces
+## Possible interfaces
 - **Web Application**: Browser-based interface.
 - **CLI**: Command Line Interface for quick analysis.
 - **Desktop App**: Standalone application.
