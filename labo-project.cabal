@@ -31,7 +31,12 @@ executable labo-project
   build-depends:       base >= 4.7 && < 5,
                        labo-project,
                        tasty,
-                       tasty-hunit
+                       tasty-hunit,
+                       scotty,
+                       wai-extra,
+                       temporary,
+                       text,
+                       bytestring
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities

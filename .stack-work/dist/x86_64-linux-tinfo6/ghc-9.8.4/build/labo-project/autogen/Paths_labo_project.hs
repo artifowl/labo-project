@@ -47,7 +47,7 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 bindir     = "/home/artifowl/Desktop/Code/Haskell/labo-project/.stack-work/install/x86_64-linux-tinfo6/8a36e99ee97912694ea1930b01d49c3f43715da50f063b7c6b281161ea29118d/9.8.4/bin"
-libdir     = "/home/artifowl/Desktop/Code/Haskell/labo-project/.stack-work/install/x86_64-linux-tinfo6/8a36e99ee97912694ea1930b01d49c3f43715da50f063b7c6b281161ea29118d/9.8.4/lib/x86_64-linux-ghc-9.8.4/labo-project-0.1.0.0-A9bQjUgku5iFrPe77nc8oB-labo-project"
+libdir     = "/home/artifowl/Desktop/Code/Haskell/labo-project/.stack-work/install/x86_64-linux-tinfo6/8a36e99ee97912694ea1930b01d49c3f43715da50f063b7c6b281161ea29118d/9.8.4/lib/x86_64-linux-ghc-9.8.4/labo-project-0.1.0.0-4ze7ZIXBJgwFDvxyYqefiJ-labo-project"
 dynlibdir  = "/home/artifowl/Desktop/Code/Haskell/labo-project/.stack-work/install/x86_64-linux-tinfo6/8a36e99ee97912694ea1930b01d49c3f43715da50f063b7c6b281161ea29118d/9.8.4/lib/x86_64-linux-ghc-9.8.4"
 datadir    = "/home/artifowl/Desktop/Code/Haskell/labo-project/.stack-work/install/x86_64-linux-tinfo6/8a36e99ee97912694ea1930b01d49c3f43715da50f063b7c6b281161ea29118d/9.8.4/share/x86_64-linux-ghc-9.8.4/labo-project-0.1.0.0"
 libexecdir = "/home/artifowl/Desktop/Code/Haskell/labo-project/.stack-work/install/x86_64-linux-tinfo6/8a36e99ee97912694ea1930b01d49c3f43715da50f063b7c6b281161ea29118d/9.8.4/libexec/x86_64-linux-ghc-9.8.4/labo-project-0.1.0.0"

@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase #-}
 
-module Analyzer (analyzeBufferOverflow, analyzeUninitializedVars, printBufferOverflowRisks, printUninitWarnings) where
+module Analyzer (analyzeBufferOverflow, analyzeUninitializedVars, formatBufferOverflowRisks, formatUninitWarnings) where
 
 import Language.C.Syntax.AST
 import Language.C.Data.Ident
@@ -141,6 +141,10 @@ printBufferOverflowRisks [] = putStrLn "✅ No risk of buffer overflow detected.
 printBufferOverflowRisks risks =
     mapM_ (\(msg, _) -> putStrLn $ "⚠️  Warning: " ++ msg) risks
 
+formatBufferOverflowRisks :: [(String, Position)] -> String
+formatBufferOverflowRisks [] = "<span class='success'>✅ No risk of buffer overflow detected.</span>"
+formatBufferOverflowRisks risks =
+    unlines $ map (\(msg, _) -> "<span class='warning'>⚠️  Warning: " ++ msg ++ "</span>") risks
 
 
 
@@ -336,3 +340,9 @@ printUninitWarnings :: [(String, Position)] -> IO ()
 printUninitWarnings [] = putStrLn "✅ No uninitialized variables detected."
 printUninitWarnings warns =
     mapM_ (\(msg, _) -> putStrLn $ "⚠️  Warning: " ++ msg) warns
+
+
+formatUninitWarnings :: [(String, Position)] -> String
+formatUninitWarnings [] = "<span class='success'><br>✅ No use of uninitialized variables detected.</span>"
+formatUninitWarnings warnings =
+    unlines $ map (\(msg, _) -> "<span class='warning'>⚠️  Warning: " ++ msg ++ "</span>") warnings

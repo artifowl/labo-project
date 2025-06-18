@@ -1,9 +1,9 @@
-# 0 "app/test.c"
+# 0 "/tmp/upload32324-1.c"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 0 "<command-line>" 2
-# 1 "app/test.c"
+# 1 "/tmp/upload32324-1.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 28 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/bits/libc-header-start.h" 1 3 4
@@ -814,7 +814,7 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 973 "/usr/include/stdio.h" 3 4
 
-# 2 "app/test.c" 2
+# 2 "/tmp/upload32324-1.c" 2
 # 1 "/usr/include/string.h" 1 3 4
 # 26 "/usr/include/string.h" 3 4
 # 1 "/usr/include/bits/libc-header-start.h" 1 3 4
@@ -1146,14 +1146,24 @@ extern size_t strlcat (char *__restrict __dest,
   __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__access__ (__read_write__, 1, 3)));
 # 552 "/usr/include/string.h" 3 4
 
-# 3 "app/test.c" 2
+# 3 "/tmp/upload32324-1.c" 2
 
 
-
-# 5 "app/test.c"
+# 4 "/tmp/upload32324-1.c"
 int main() {
-    int x;
-    for (int x = 0; x < 10; x++) {
-        int y = y + 1;
-    }
+
+
+    char str[] = "Hello, World!";
+
+    size_t length = strlen(str);
+
+    printf("The length of the string is: %zu\n", length);
+
+    printf("The string is: %s\n", str);
+
+    printf("End of program.\n");
+
+    printf("Program completed successfully.\n");
+
+    return 0;
 }

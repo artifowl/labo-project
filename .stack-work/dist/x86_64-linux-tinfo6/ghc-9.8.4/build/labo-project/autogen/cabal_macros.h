@@ -20,6 +20,16 @@
   (major1) == 4 && (major2) <  19 || \
   (major1) == 4 && (major2) == 19 && (minor) <= 2)
 #endif /* MIN_VERSION_base */
+/* package bytestring-0.12.1.0 */
+#ifndef VERSION_bytestring
+#define VERSION_bytestring "0.12.1.0"
+#endif /* VERSION_bytestring */
+#ifndef MIN_VERSION_bytestring
+#define MIN_VERSION_bytestring(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  12 || \
+  (major1) == 0 && (major2) == 12 && (minor) <= 1)
+#endif /* MIN_VERSION_bytestring */
 /* package labo-project-0.1.0.0 */
 #ifndef VERSION_labo_project
 #define VERSION_labo_project "0.1.0.0"
@@ -30,6 +40,16 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_labo_project */
+/* package scotty-0.22 */
+#ifndef VERSION_scotty
+#define VERSION_scotty "0.22"
+#endif /* VERSION_scotty */
+#ifndef MIN_VERSION_scotty
+#define MIN_VERSION_scotty(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  22 || \
+  (major1) == 0 && (major2) == 22 && (minor) <= 0)
+#endif /* MIN_VERSION_scotty */
 /* package tasty-1.5.3 */
 #ifndef VERSION_tasty
 #define VERSION_tasty "1.5.3"
@@ -50,6 +70,36 @@
   (major1) == 0 && (major2) <  10 || \
   (major1) == 0 && (major2) == 10 && (minor) <= 2)
 #endif /* MIN_VERSION_tasty_hunit */
+/* package temporary-1.3 */
+#ifndef VERSION_temporary
+#define VERSION_temporary "1.3"
+#endif /* VERSION_temporary */
+#ifndef MIN_VERSION_temporary
+#define MIN_VERSION_temporary(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  3 || \
+  (major1) == 1 && (major2) == 3 && (minor) <= 0)
+#endif /* MIN_VERSION_temporary */
+/* package text-2.1.1 */
+#ifndef VERSION_text
+#define VERSION_text "2.1.1"
+#endif /* VERSION_text */
+#ifndef MIN_VERSION_text
+#define MIN_VERSION_text(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  1 || \
+  (major1) == 2 && (major2) == 1 && (minor) <= 1)
+#endif /* MIN_VERSION_text */
+/* package wai-extra-3.1.16 */
+#ifndef VERSION_wai_extra
+#define VERSION_wai_extra "3.1.16"
+#endif /* VERSION_wai_extra */
+#ifndef MIN_VERSION_wai_extra
+#define MIN_VERSION_wai_extra(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  1 || \
+  (major1) == 3 && (major2) == 1 && (minor) <= 16)
+#endif /* MIN_VERSION_wai_extra */
 
 /* tool alex-3.5.2.0 */
 #ifndef TOOL_VERSION_alex
@@ -163,7 +213,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "labo-project-0.1.0.0-A9bQjUgku5iFrPe77nc8oB-labo-project"
+#define CURRENT_COMPONENT_ID "labo-project-0.1.0.0-4ze7ZIXBJgwFDvxyYqefiJ-labo-project"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
