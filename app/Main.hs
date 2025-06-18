@@ -13,7 +13,7 @@ import Control.Monad.IO.Class (liftIO)
 import Parser (mainParser)
 import Analyzer (analyzeBufferOverflow, analyzeUninitializedVars, formatBufferOverflowRisks, formatUninitWarnings)
 
--- Fonction qui génère la page HTML avec un paramètre pour le résultat (vide ou texte HTML)
+-- Function to generate the HTML page with the results
 pageHtml :: TL.Text -> TL.Text
 pageHtml resultHtml = TL.pack $ unlines
   [ "<!DOCTYPE html>"
@@ -132,10 +132,12 @@ pageHtml resultHtml = TL.pack $ unlines
   ]
 
 
+
+-- Main function to run the web server
 main :: IO ()
 main = scotty 3000 $ do
   get "/" $ do
-    html $ pageHtml "" -- Pas de résultat affiché au départ
+    html $ pageHtml "" 
 
   post "/" $ do
     files <- files
